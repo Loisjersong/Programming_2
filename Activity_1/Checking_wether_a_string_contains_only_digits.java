@@ -1,5 +1,8 @@
+/** 
+* @author Gonzales, Lois Jerson A.
+*/
 package Activity_1;
-import java.util. Scanner;
+import java.util.Scanner;
 public class Checking_wether_a_string_contains_only_digits {
     
     public static void checkedString(String string) {
