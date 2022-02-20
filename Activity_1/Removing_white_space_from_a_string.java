@@ -1,8 +1,10 @@
 /** 
 * @author Gonzales, Lois Jerson A.
 */
-package Activity_1;
+package Programming_2.Activity_1;
+
 import java.util.Scanner;
+
 public class Removing_white_space_from_a_string {
 
     /**

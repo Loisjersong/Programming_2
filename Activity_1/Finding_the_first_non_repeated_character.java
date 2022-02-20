@@ -1,8 +1,10 @@
 /** 
 * @author Gonzales, Lois Jerson A.
 */
-package Activity_1;
+package Programming_2.Activity_1;
+
 import java.util.Scanner;
+
 public class Finding_the_first_non_repeated_character {
     /**
      * This is the method that will find the first

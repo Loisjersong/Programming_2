@@ -1,7 +1,7 @@
 /** 
 * @author Gonzales, Lois Jerson A.
 */
-package Activity_1;
+package Programming_2.Activity_1;
 import java.util.Scanner;
 public class Checking_wether_a_string_contains_only_digits {
     
