@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
-public class Counting_duplicate_characters {
+public class CountingDuplicateCharacters {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
