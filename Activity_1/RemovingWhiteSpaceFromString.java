@@ -5,7 +5,7 @@ package Programming_2.Activity_1;
 
 import java.util.Scanner;
 
-public class Removing_white_space_from_a_string {
+public class RemovingWhiteSpaceFromString {
 
     /**
      *  This method removes all the whitespace in the string

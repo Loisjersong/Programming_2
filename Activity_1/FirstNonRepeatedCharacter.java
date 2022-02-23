@@ -5,7 +5,7 @@ package Programming_2.Activity_1;
 
 import java.util.Scanner;
 
-public class Finding_the_first_non_repeated_character {
+public class FirstNonRepeatedCharacter {
     /**
      * This is the method that will find the first
      * non repeated character in a string

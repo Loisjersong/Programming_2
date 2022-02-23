@@ -6,7 +6,7 @@ package Programming_2.Activity_1;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Checking_whether_two_strings_are_anagram {
+public class Anagram {
 
     /**
      * This method will evaluate wether string 1

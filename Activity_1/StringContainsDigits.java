@@ -3,7 +3,7 @@
 */
 package Programming_2.Activity_1;
 import java.util.Scanner;
-public class Checking_wether_a_string_contains_only_digits {
+public class StringContainsDigits {
     
     /**
      * This method will output wether the checkString method returns true/false
