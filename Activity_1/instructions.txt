@@ -1,0 +1,13 @@
+Activity 1 - Test your Java Programming Skills
+
+The following problems will test your string manipulation and mathematical corner case programming prowess.
+    1. Counting duplicate characters: Write a program that counts duplicate characters from a given string.
+    2. Finding the first non-repeated character: Write a program that returns the first non-repeated character from a given string.
+    3. Checking whether a string contains only digits: Write a program that checks whether the given string contains only digits.
+    4. Removing white space from a string: Write a program that removes all white spaces from the given string.
+    5. Checking whether two strings are anagram: Write a program that checks whether two strings are anagrams. Consider that an anagram of a string is a permutation of this string by ignoring capitalization and white spaces
+
+Instructions:
+    Create a program for each problem.
+    Name each program using the bold title of the given problem.
+    Save your works in your GitHub Repository and submit here the link to that repository.
