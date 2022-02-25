@@ -1,3 +1,6 @@
+/**
+ * @author Gonzales, Lois Jerson A.
+ */
 package Programming_2.Activity_2;
 
 import java.util.ArrayList;
@@ -10,11 +13,12 @@ public class Main {
         
         ArrayList<CandyMachine> candies  = new ArrayList<>();
 
+        // invoked all methods from the CandyMachine Class
         CandyMachine.showMenu();
         CandyMachine.buyProduct(candies, input);
         CandyMachine.showBoughtProducts(candies);
         System.out.println("Total Price of Product: " + CandyMachine.productTotal(candies));
-
+        CandyMachine.acceptPayment(candies, input);
     }
     
 }

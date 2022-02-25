@@ -1,3 +1,6 @@
+/**
+ * @author Gonzales, Lois Jerson A.
+ */
 package Programming_2.Activity_2;
 
 import java.util.ArrayList;
@@ -12,8 +15,6 @@ public class CandyMachine {
         this.productName = productName;
         this.productPrice = productPrice;
     }
-
-    ArrayList<CandyMachine> list = new ArrayList<>();
 
     public String getProductName() {
         return this.productName;
@@ -37,6 +38,7 @@ public class CandyMachine {
         return "[" + this.productName + ", " + this.productPrice + "]";
     }
 
+    // This method is to show the list candies available in the shop
     public static void showMenu() {
         System.out.println("Welcome to Gonzales' Candy Machine!!!"); 
             System.out.println("Products-----Prices");
@@ -52,58 +54,94 @@ public class CandyMachine {
             System.out.println("[10]Snickers  39");
             System.out.println();
     }
-
+    /**
+     * This method ask user to pick a candy of choice and add is to the ArrayList
+     * @param list ArrayList of candies
+     * @param input to ask input from the user
+     */
     public static void buyProduct(ArrayList<CandyMachine> list, Scanner input) {
         int choice;
-        boolean run = true;
         String buy;
+        int numOfCandy = 0;
+        String nameOfCandy = "";
         do {
-            System.out.print("Enter a number to checkout: ");
+            System.out.print("What candy would you like to checkout[1-10]: ");
             choice = input.nextInt();
 
-            switch(choice) {
-                case 1:
-                    list.add(new CandyMachine("Kit-Kat", 25));
-                break;
+            // this control statement is used in the next control statement
+            if(choice == 1) {
+                nameOfCandy = "Kit-Kat";
+            } else if (choice == 2) {
+                nameOfCandy = "Frutos";
+            } else if (choice == 3) {
+                nameOfCandy = "Hershey's";
+            } else if (choice == 4) {
+                nameOfCandy = "Mentos";
+            } else if (choice == 5) {
+                nameOfCandy = "Potchi";
+            } else if (choice == 6) {
+                nameOfCandy = "Sugus";
+            } else if (choice == 7) {
+                nameOfCandy = "Skittles";
+            } else if (choice == 8) {
+                nameOfCandy = "Snow bear";
+            } else if (choice == 9) {
+                nameOfCandy = "M&M's";
+            } else if (choice == 10) {
+                nameOfCandy = "Snickers";
+            }
+            
+            // asks user of the quantity of the candy
+            if(choice < 10) {
+                System.out.print("How many " + nameOfCandy + " do you like?: ");
+                numOfCandy = input.nextInt();
+            } else {
+                System.out.println("Invalid input!");
+            }
 
-                case 2:
-                    list.add(new CandyMachine("Frutos", 22));
-                break;
+            // this whole code block adds selected candy in the ArrayList 
+            for(int i = 0; i < numOfCandy; i++) {
+                switch(choice) {
+                    case 1:
+                        list.add(new CandyMachine("Kit-Kat", 25));
+                    break;
 
-                case 3:
-                    list.add(new CandyMachine("Hershey's", 55));
-                break;
+                    case 2:
+                        list.add(new CandyMachine("Frutos", 22));
+                    break;
 
-                case 4:
-                    list.add(new CandyMachine("Mentos", 10));
-                break;
+                    case 3:
+                        list.add(new CandyMachine("Hershey's", 55));
+                    break;
 
-                case 5:
-                    list.add(new CandyMachine("Potchi", 40));
-                break;
+                    case 4:
+                        list.add(new CandyMachine("Mentos", 10));
+                    break;
 
-                case 6:
-                    list.add(new CandyMachine("Sugus", 13));
-                break;
+                    case 5:
+                        list.add(new CandyMachine("Potchi", 40));
+                    break;
 
-                case 7:
-                    list.add(new CandyMachine("Skittles", 90));
-                break;
+                    case 6:
+                        list.add(new CandyMachine("Sugus", 13));
+                    break;
 
-                case 8:
-                    list.add(new CandyMachine("Snow bear", 34));
-                break;
+                    case 7:
+                        list.add(new CandyMachine("Skittles", 90));
+                    break;
 
-                case 9:
-                    list.add(new CandyMachine("M&M's", 76));
-                break;
+                    case 8:
+                        list.add(new CandyMachine("Snow bear", 34));
+                    break;
 
-                case 10:
-                    list.add(new CandyMachine("Snickers", 39));
-                break;
+                    case 9:
+                        list.add(new CandyMachine("M&M's", 76));
+                    break;
 
-                default:
-                    System.out.println("Invalid Input");
+                    case 10:
+                        list.add(new CandyMachine("Snickers", 39));
+                    break;
+                }
             }
             System.out.print("Would you like to buy a product again? Y/N: ");
             buy = input.next();
@@ -112,6 +150,11 @@ public class CandyMachine {
         
     }
 
+    /**
+     * This method is used to calculate the total price of candies in the list
+     * @param list hold the list of candies and its price
+     * @return this will return the total price of the candies in the ArrayList
+     */
     public static int productTotal(ArrayList<CandyMachine> list) {
         int totalPrice = 0;
         for(int i = 0; i < list.size(); i++) {
@@ -120,33 +163,46 @@ public class CandyMachine {
         return totalPrice;
     }
 
+    /**
+     * This method will show the total items that the user has inputted in the list
+     * @param list hold the list of candies and its price
+     */
     public static void showBoughtProducts(ArrayList<CandyMachine> list) {
+        int count = 0;
+        String[] candyNames = {"Kit-Kat", "Frutos", "Hershey's", "Mentos", "Potchi",
+                                "Sugus", "Skittles", "Snow bear", "M&M's", "Snickers"};
+
         System.out.println("Items bought: ");
-        for(int i = 0; i < list.size(); i++) {
-            // System.out.println(list.get(i).getProductName() + " " + list.get(i).getProductPrice());
-            if(list.get(i).getProductName() == "Kit-Kat") {
-                System.out.println("Kit-Kat   25");
-            } else if(list.get(i).getProductName() == "Frutos") {
-                System.out.println("Frutos    22");
-            } else if(list.get(i).getProductName() == "Hershey's") {
-                System.out.println("Hershey's 55");
-            } else if(list.get(i).getProductName() == "Mentos") {
-                System.out.println("Mentos    10");
-            } else if(list.get(i).getProductName() == "Potchi") {
-                System.out.println("Potchi    40");
-            } else if(list.get(i).getProductName() == "Sugus") {
-                System.out.println("Sugus     13");
-            } else if(list.get(i).getProductName() == "Skittles") {
-                System.out.println("Skittles  90");
-            } else if(list.get(i).getProductName() == "Snow bear") {
-                System.out.println("Snow bear 34");
-            } else if(list.get(i).getProductName() == "M&M's") {
-                System.out.println("M&M's     76");
-            } else if(list.get(i).getProductName() == "Snickers") {
-                System.out.println("Snickers  39");
+
+        // this for loop will calculate how many the quantity per candy
+        for(int i = 0; i < candyNames.length; i++) {
+            for(int j = 0; j < list.size(); j++) {
+                if(list.get(j).getProductName().equals(candyNames[i])) 
+                    count++;
             }
+            if(count > 0) 
+                System.out.println(candyNames[i] + " [" + count + "x]");
+
+            count = 0;
         }
         System.out.println();
     }
 
+    /**
+     * This method is used to asked for payment from the user
+     * @param input this variable is used for input
+     */
+    public static void acceptPayment(ArrayList<CandyMachine> list, Scanner input) {
+        int money = 0;
+        do {
+            System.out.print("Please enter payment here: ");
+            money  = input.nextInt();
+            if (money < productTotal(list)) {
+                System.out.println("Incomplete payment you still have " + (productTotal(list) - money) + " to pay");
+            } else if (money > productTotal(list)) {
+                System.out.println("your change is: " + (money - productTotal(list)));
+                System.out.println("Thanks for buying with us!");
+            }
+        } while(money < productTotal(list));
+    }
 }
