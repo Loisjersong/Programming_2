@@ -1,7 +1,7 @@
 /** 
 * @author Gonzales, Lois Jerson A.
 */
-package Programming_2.Activity_1;
+package Activity_1;
 
 import java.util.Arrays;
 import java.util.Scanner;
